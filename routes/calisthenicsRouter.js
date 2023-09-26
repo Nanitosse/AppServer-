@@ -1,8 +1,8 @@
 const express = require('express');
-const weightRouter = express.Router();
+const calisthenicsRouter = express.Router();
 
 
-weightRouter('/')
+calisthenicsRouter('/')
 .all((req,res,next)=>{
     res.statusCode=200;
     res.setHeader('Content-Type', 'application/json')
@@ -20,3 +20,4 @@ weightRouter('/')
 .delet((res,req,next)={
     
 })
+
