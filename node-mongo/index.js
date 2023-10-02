@@ -19,8 +19,23 @@ async function VideoCollection(){
         const db =client.db('sport');
         const collection = db.collection('Videos');
 
-        const ReadVideo = fs.readFileSync()
+        const ReadVideo = fs.readFileSync('./videosFile/video.mp4');
+        
+        const videoDocument={
+            name:'video1',
+            data:'ReadVideo'
+        };
+
+        const result = await collection.insertOne(videoDocument);
+        console.log(`Video inserted with ID: ${result.insertedId}`);
+    }catch (err){
+        console.error("Error inserting video:", err);
+        
+    } finally {
+        
+        await client.close();
     }
 }
 
 MongoConnect();
+VideoCollection()
