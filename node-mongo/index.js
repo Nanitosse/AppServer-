@@ -2,7 +2,7 @@
 const {MongoClient} = require('mongodb');
 const url = 'mongodb://localhost:27017/';
 const fs = require('fs');
-const createCollection = require('./collections/imgCollect')
+const {createCollection} = require('./collections/imgCollect')
 
 const client= new MongoClient(url,{useNewUrlParser:true, useUnifiedTopology:true});
 
@@ -30,7 +30,7 @@ async function VideoCollection(){
 
         const result = await collection.insertOne(videoDocument);
         console.log(`Video inserted with ID: ${result.insertedId}`);
-        const collect= await createCollection();
+        
       
     }catch (err){
         console.error("Error inserting video:", err);
