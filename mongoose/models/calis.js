@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const monfoose = require ('mongoose');
 const  Schema = mongoose.Schema ; 
 
 const commentSchema = new Schema({
@@ -39,8 +38,11 @@ const calisSchema = new Schema({
         type: Number,
         default: 0
       },
+      comment:[commentSchema]
 
 
+},{
+  timestamps:true,
 })
 
 const calisthenic = mongoose.model('Calisthenic', calisSchema)

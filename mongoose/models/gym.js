@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const monfoose = require ('mongoose');
 const  Schema = mongoose.Schema ; 
 
 const commentSchema = new Schema({
@@ -39,8 +38,11 @@ const gymSchema = new Schema({
         type: Number,
         default: 0
       },
+      comments:[commentSchema]
 
 
+},{
+    timestamps:true
 })
 
 const gym = mongoose.model('Gym', gymSchema)
