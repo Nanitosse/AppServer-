@@ -45,4 +45,5 @@ const gymSchema = new Schema({
     timestamps:true
 })
 
-const gym = mongoose.model('Gym', gymSchema)
+const Gym = mongoose.model('Gym', gymSchema);
+module.exports = Gym;

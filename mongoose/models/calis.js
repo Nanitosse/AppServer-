@@ -45,5 +45,7 @@ const calisSchema = new Schema({
   timestamps:true,
 })
 
-const calisthenic = mongoose.model('Calisthenic', calisSchema)
+const Calisthenic = mongoose.model('Calisthenic', calisSchema);
+
+module.exports =  Calisthenic;
 
