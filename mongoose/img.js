@@ -15,26 +15,10 @@ connect.then(() => {
     const Images = [
         {
 
-            title: 'splash',  
-            url: '../imageFile/soccer.png',
+            title: 'updated calisthenics ',  
+            url: '../imageFile/calisImg.jpg',
         },
-        {
-            title:"GYM",
-            url: "../imageFile/gym.jpg"
-        },
-        {
-            title:"nutrition",
-            url: "../imageFile/nutrution.jpg"
-        },
-        {
-            title:"calisthenics",
-            url: "../imageFile/street.jpg"
-        },
-        {
-            title:"drawerlogo",
-            url: "../imageFile/logo.jpg"
-        },
-        
+       
     ]
 
     
