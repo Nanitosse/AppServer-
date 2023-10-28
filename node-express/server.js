@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser=require('body-parser');
 const morgan = require('morgan')
-// const cors= require('cors');
+const cors= require('cors');
 // const calisthenicsRouter = require('./routes/calisthenicsRouter');
 // const nutritionRouter = require('./routes/nutritionRouter');
 // const weightRouter = require('./routes/weightRouter');
@@ -12,7 +12,7 @@ const port = 3000;
 
 
 app.use(bodyParser.json());
-// app.use(cors());
+app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
